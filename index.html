@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDrive - My Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #111;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .search-bar {
+            flex: 1;
+            margin: 0 2rem;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #111;
+            padding: 1rem;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #222;
+        }
+
+        .sidebar-menu li.active {
+            background-color: #0066ff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .files-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .upload-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .files-list {
+            width: 100%;
+        }
+
+        .files-list-header {
+            display: grid;
+            grid-template-columns: 50px 2fr 1fr 1fr 100px;
+            padding: 1rem;
+            background-color: #111;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .file-item {
+            display: grid;
+            grid-template-columns: 50px 2fr 1fr 1fr 100px;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .file-item:hover {
+            background-color: #111;
+        }
+
+        .file-icon {
+            font-size: 1.5rem;
+        }
+
+        .file-name {
+            color: #fff;
+        }
+
+        .file-date, .file-size {
+            color: #666;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+        }
+
+        .action-btn:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+            
+            .sidebar span {
+                display: none;
+            }
+            
+            .search-bar {
+                margin: 0 1rem;
+            }
+
+            .file-date {
+                display: none;
+            }
+
+            .files-list-header, .file-item {
+                grid-template-columns: 50px 2fr 1fr 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Atomcloud Web Services</div>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search files...">
+        </div> -->
+        <div class="user-profile">
+            <span>Team TSI</span>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li class="active">📁 <span>Files</span></li>
+             <!--  <li>⭐ <span>Starred</span></li>
+                <li>🕒 <span>Recent</span></li>
+                <li>🗑️ <span>Trash</span></li> 
+                 <li>⚙️ <span>Settings</span></li> -->
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div class="files-header">
+                <h2>All Files</h2>
+                <!-- <button class="upload-btn">Upload File</button> -->
+            </div>
+
+            <div class="files-list">
+                <div class="files-list-header">
+                    <div></div>
+                    <div>Name</div>
+                    <div>Date Modified</div>
+                    <div>Size</div>
+                    <!-- <div>Actions</div> -->
+                </div>
+
+                <div class="file-item">
+                    <div class="file-icon">📄</div>
+                    <div class="file-name"><a href="download-Team_Logo.jpg.html" >Team_Logo.jpg</a></div>
+                    <div class="file-date">Nov 18, 2024</div>
+                    <div class="file-size">2.5 MB</div>
+                    <div class="file-actions">
+                    </div>
+                </div>
+
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
