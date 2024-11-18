@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDrive - File Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #111;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .main-container {
+            display: flex;
+            height: calc(100vh - 60px);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #111;
+            padding: 1rem;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu li {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar-menu li:hover {
+            background-color: #222;
+        }
+
+        .sidebar-menu li.active {
+            background-color: #0066ff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        .back-button {
+            display: flex;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            color: #fff;
+        }
+
+        .file-preview {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .file-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .file-name {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: #0066ff;
+            color: #fff;
+        }
+
+        .file-details {
+            background-color: #111;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .detail-item {
+            padding: 1rem;
+            border-bottom: 1px solid #222;
+        }
+
+        .detail-label {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-value {
+            color: #fff;
+        }
+
+        .sharing-section {
+            margin-top: 2rem;
+        }
+
+        .share-input {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .share-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border-radius: 5px;
+            border: none;
+            background-color: #222;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 60px;
+            }
+            
+            .sidebar span {
+                display: none;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Atomcloud Web Services</div>
+        <div class="user-profile">
+            <span>Team TSI</span>
+        </div>
+    </nav>
+
+    <div class="main-container">
+
+        <main class="content">
+            <a href="index.html" class="back-button">← Back to files</a>
+
+            <div class="file-preview">
+                <div class="file-icon">📄</div>
+                <h2 class="file-name">Team_Logo.jpg</h2>
+                <div class="action-buttons">
+                    <button class="btn btn-primary">
+                        <a href="pic/Team_Logo.jpg"  >Download</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="file-details">
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">File Type</div>
+                        <div class="detail-value">JPG picture</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Size</div>
+                        <div class="detail-value">741 KB</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Created</div>
+                        <div class="detail-value">November 18, 2024</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Modified</div>
+                        <div class="detail-value">November 18, 2024</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Owner</div>
+                        <div class="detail-value">Team TSI</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-label">Location</div>
+                        <div class="detail-value">/Pics</div>
+                    </div>
+                </div>
+
+            
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
